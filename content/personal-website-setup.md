@@ -32,3 +32,63 @@ To customize this from here, you need to know markdown. If you don't know it alr
 All you see in the browser with the localhost url can't be shared with others or in internet. It won't work outside of your computer. To make it available to internet, the easiest way is to deploy this to github pages.
 
 - Go to [Github](https://www.github.com) and create a new repository.
+- Go back to terminal and do `rm -rf .git`.
+- Create a file with the path `.github/workflows/deploy.yml` and paste this content there:
+```
+name: Deploy Quartz site to GitHub Pages
+ 
+on:
+  push:
+    branches:
+      - main
+ 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+ 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+ 
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for git info
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Quartz
+        run: npx quartz build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+ 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+- Run the following git commands:
+```
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin <your repo url>
+git push -u origin main
+```
+- Go back to your github repo page and confirm you can see the same code there.
+
