@@ -32,6 +32,8 @@ To customize this from here, you need to know markdown. If you don't know it alr
 All you see in the browser with the localhost url can't be shared with others or in internet. It won't work outside of your computer. To make it available to internet, the easiest way is to deploy this to github pages.
 
 - Go to [Github](https://www.github.com) and create a new repository.
+- Now, go to settings and select "pages" on the side menu.
+- In the source dropdown, select "Github Actions".
 - Go back to terminal and do `rm -rf .git`.
 - Create a file with the path `.github/workflows/deploy.yml` and paste this content there:
 ```
@@ -91,4 +93,20 @@ git remote add origin <your repo url>
 git push -u origin main
 ```
 - Go back to your github repo page and confirm you can see the same code there.
+- You should also see that the build is running when you click on "Actions".
 
+## 3. Custom domain setup
+
+- If you don't want custom domain, you can use the github provided url to share your website to anyone outside of your system as well. To get this, go to "Pages" menu in Settings and you can see the github provided url for your site. It will be of the form `<github-username>.github.io`
+- If you want to use your custom domain which you have bought already, go to your DNS provider dashboard.
+- Add 4 "A" records to each of these IP addressess:
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+- Add one "CNAME" record with the name "www" which points to github provided url of the form `<github-username>.github.io`.
+- Go to "Pages" menu in Github Settings and input your domain name there and click "save".
+- It might take some time inorder for your records to propagate, so I suggest you give 5 minutes gap before you do the previous step after adding records.
+- Once these steps are successful, you can access your website using your custom domain name.
