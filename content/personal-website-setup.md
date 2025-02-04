@@ -15,7 +15,7 @@ There are 5 steps in this process. 4 are quick and remaining 1 may take some tim
 - Install NodeJS version greater than or equal to 20. You can do that from [here](https://nodejs.org/en/download).
 - You need to install Git if you already don't have it in your system. Get it from [here](https://git-scm.com/downloads).
 - Open terminal or command prompt in your system and run the following commands:
-```
+```bash
 git clone https://github.com/jackyzha0/quartz.git
 cd quartz
 npm i
@@ -36,7 +36,7 @@ All you see in the browser with the localhost url can't be shared with others or
 - In the source dropdown, select "Github Actions".
 - Go back to terminal and do `rm -rf .git`.
 - Create a file with the path `.github/workflows/deploy.yml` and paste this content there:
-```
+```yaml
 name: Deploy Quartz site to GitHub Pages
  
 on:
@@ -84,7 +84,7 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 - Run the following git commands:
-```
+```bash
 git init
 git add .
 git commit -m "first commit"
@@ -100,7 +100,7 @@ git push -u origin main
 - If you don't want custom domain, you can use the github provided url to share your website to anyone outside of your system as well. To get this, go to "Pages" menu in Settings and you can see the github provided url for your site. It will be of the form `<github-username>.github.io`
 - If you want to use your custom domain which you have bought already, go to your DNS provider dashboard.
 - Add 4 "A" records to each of these IP addressess:
-```
+```bash
 185.199.108.153
 185.199.109.153
 185.199.110.153
