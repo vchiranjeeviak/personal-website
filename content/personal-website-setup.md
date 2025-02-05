@@ -10,7 +10,7 @@ Yes, I used Notion to host my site which is part of the paid plan. I wanted to m
 
 There are 5 steps in this process. 4 are quick and remaining 1 may take some time and optional too.
 
-## 1. Code setup for this ( programming knowledge not required... mostly )
+## 1. Code setup for this (programming knowledge not required... mostly)
 
 - Install NodeJS version greater than or equal to 20. You can do that from [here](https://nodejs.org/en/download).
 - You need to install Git if you already don't have it in your system. Get it from [here](https://git-scm.com/downloads).
@@ -95,7 +95,7 @@ git push -u origin main
 - Go back to your github repo page and confirm you can see the same code there.
 - You should also see that the build is running when you click on "Actions".
 
-## 3. Custom domain setup
+## 3. Custom domain setup (optional)
 
 - If you don't want custom domain, you can use the github provided url to share your website to anyone outside of your system as well. To get this, go to "Pages" menu in Settings and you can see the github provided url for your site. It will be of the form `<github-username>.github.io`
 - If you want to use your custom domain which you have bought already, go to your DNS provider dashboard.
@@ -106,7 +106,26 @@ git push -u origin main
 185.199.110.153
 185.199.111.153
 ```
-- Add one "CNAME" record with the name "www" which points to github provided url of the form `<github-username>.github.io`.
 - Go to "Pages" menu in Github Settings and input your domain name there and click "save".
 - It might take some time inorder for your records to propagate, so I suggest you give 5 minutes gap before you do the previous step after adding records.
 - Once these steps are successful, you can access your website using your custom domain name.
+
+## 4. Google Analytics setup (optional)
+
+It feels nice to see how many people visited our blog or our website and Google Analytics is one such platform which provides that for free. All you need to do is:
+
+- Go to Google Analytics and create a stream. This will give you a tag id.
+- Open `quartz.config.ts` file in the cloned repo, and identify `analytics` object in the config.
+- Change the provider to `google` if that is not already there, and add another key in the `analytics` object called `tagId`.
+- Give this the same value given by Google Analytics.
+- It should look something like this:
+```ts
+analytics: {
+  provider: "google",
+  tagId: "G-KDQD9XXXXX"
+},
+```
+- After this, save the file, commit and push to github which will automatically deploy this in few seconds and you can see the results live.
+
+
+To be honest, I already have lot of things already like, custom domain purchased, Google analytics stream setup, prior programming and hosting knowledge. That is why it was done in 10 minutes. It might take a bit more if you lack any of these. To get started, I don't believe custom domain and analytics are necessary. You can enjoy with github provided url for some time before you setup other lengthy steps. Thanks for reading this far. Bye-bye.
