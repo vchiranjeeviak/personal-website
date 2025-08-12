@@ -4,7 +4,7 @@ title: How I setup my personal website in 10 minutes!
 
 I was scrolling through youtube and suddenly out of no where I remembered that I setup my personal website some time back. When I opened it, this was the situation 👇
 
-![[Screenshot 2025-02-05 at 12.03.11 AM.png]]
+![[notion-signin.png]]
 
 Yes, I used Notion to host my site which is part of the paid plan. I wanted to make a good use of the domain which I already bought long ago. So, I was searching for an easy way to setup a personal website without much hassle and that too for free. I came across this tool called Quartz which helped me set this website up in less than 10 minutes. This is how I did it.
 
@@ -38,21 +38,21 @@ All you see in the browser with the localhost url can't be shared with others or
 - Create a file with the path `.github/workflows/deploy.yml` and paste this content there:
 ```yaml
 name: Deploy Quartz site to GitHub Pages
- 
+
 on:
   push:
     branches:
       - main
- 
+
 permissions:
   contents: read
   pages: write
   id-token: write
- 
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
- 
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -71,7 +71,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
- 
+
   deploy:
     needs: build
     environment:
