@@ -7,5 +7,5 @@ We can connect on Linkedin [@Chiranjeevi Tirunagari](https://www.linkedin.com/in
 
 ## Latest writings
 
-[[updates-on-my-learnings|Updates on my learnings!]]
+[[updates-on-my-learnings|Updates on my learnings!]]  
 [[personal-website-setup|How I setup my personal website in 10 minutes!]]

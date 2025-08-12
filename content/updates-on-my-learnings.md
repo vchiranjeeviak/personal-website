@@ -2,6 +2,8 @@
 title: Learning updates!
 ---
 
+# My learning updates
+
 This is where I post regular updates on what I am learning right now or next and why. I know this doesn't help you anyway, but it's just a kind of journal. I will be glad if it helps!
 
 ## 12 August 2025
