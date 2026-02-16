@@ -28,7 +28,7 @@ In the US alone, data centers consumed 183 TWh in 2024 — over 4% of the countr
 
 And here's the thing — these data centers need constant power. 24/7, 365 days. They can't just rely on solar and wind because those are intermittent. One Harvard study found that the carbon intensity of electricity used by data centers was 48% higher than the US average precisely because of this baseload requirement.
 
-Now think about what the big players are planning. OpenAI's Stargate initiative wants to spend \$500 billion on data centers that could each need five gigawatts of power — more than the entire state of New Hampshire. Google is spending $75 billion on AI infrastructure in 2025 alone.
+Now think about what the big players are planning. OpenAI's Stargate initiative wants to spend \$500 billion on data centers that could each need five gigawatts of power — more than the entire state of New Hampshire. Google is spending \$75 billion on AI infrastructure in 2025 alone.
 
 The question I keep coming back to is: where does all this energy come from? Energy infrastructure doesn't work on tech industry timelines. You can ship a software update in a week. Building power plants, transmission lines, and grid upgrades takes a decade. The tech industry thinks in quarters. Energy systems think in decades. That mismatch alone should make us pause before declaring that AI is about to replace everyone.
 
@@ -76,7 +76,7 @@ Most AI breakthroughs are in the digital domain — text, code, images, data ana
 
 Robotics is making progress, sure. But the challenges are fundamental, not just engineering details to be worked out. One robotics researcher described it well: the physical world is inherently dynamic. Your office looks slightly different every day. Someone moved something, something broke, conditions changed. Getting robots to handle that kind of uncertainty the way humans naturally do is extremely hard.
 
-There's this concept called the "manipulation-to-physical-body ratio" — humans can lift their own body weight or more, but most robots can't lift half their weight because of actuator limitations. Current humanoid robots like Tesla's Optimus can operate untethered for only two to four hours per charge. They cost $150,000 to $500,000 per unit and would need to drop to $20,000-$50,000 for large-scale deployment to make economic sense.
+There's this concept called the "manipulation-to-physical-body ratio" — humans can lift their own body weight or more, but most robots can't lift half their weight because of actuator limitations. Current humanoid robots like Tesla's Optimus can operate untethered for only two to four hours per charge. They cost \$150,000 to \$500,000 per unit and would need to drop to \$20,000-\$50,000 for large-scale deployment to make economic sense.
 
 Training physical AI is also fundamentally different from training language models. You can't scrape the internet for it. You need real-world sensor data, motion capture, LiDAR — context-specific data that maps to actual physical actions. And unlike a bad ChatGPT response that costs nothing, a robot making a wrong move in a factory or a hospital has real consequences.
 
