@@ -8,4 +8,7 @@ This is where I write about DevOps, cloud infrastructure, productivity, and othe
 
 ## Latest writings
 
-[[personal-website-setup/personal-website-in-10-minutes|How I setup my personal website in 10 minutes!]]
+
+[[AI/is-ai-really-saving-time|Are We Really Saving Time with AI?]]
+
+[[AI/ai-reality-check-2026-jan|AI Reality Check - 2026 Jan]]
