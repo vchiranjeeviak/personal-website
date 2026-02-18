@@ -9,6 +9,6 @@ This is where I write about DevOps, cloud infrastructure, productivity, and othe
 ## Latest writings
 
 
-[[AI/is-ai-really-saving-time|Are We Really Saving Time with AI?]]
+[[ai/is-ai-really-saving-time|Are We Really Saving Time with AI?]]
 
-[[AI/ai-reality-check-2026-jan|AI Reality Check - 2026 Jan]]
+[[ai/ai-reality-check-2026-jan|AI Reality Check - 2026 Jan]]
